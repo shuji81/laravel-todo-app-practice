@@ -37,13 +37,13 @@
 5. アプリケーションキーの生成
 
    ```sh
-   docker-compose exec php php src/artisan key:generate
+   docker-compose exec php php artisan key:generate
    ```
 
 6. マイグレーションの実行
 
    ```sh
-   docker-compose exec php php src/artisan migrate
+   ddocker-compose exec php php artisan migrate
    ```
 
 7. アプリケーションへアクセス
