@@ -43,7 +43,7 @@
 6. マイグレーションの実行
 
    ```sh
-   ddocker-compose exec php php artisan migrate
+   docker-compose exec php php artisan migrate
    ```
 
 7. アプリケーションへアクセス
