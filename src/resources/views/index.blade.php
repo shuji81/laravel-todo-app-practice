@@ -6,11 +6,12 @@
 
 @section('content')
 <div class="todo__alert">
-  // メッセージ機能
+  <!-- メッセージ機能 -->
 </div>
 
 <div class="todo__content">
   <div class="todo__panel">
+    <!-- TODO：ログイン後の画面は未作成で、勤怠アプリからもってきたhtmlをいれている。ここはプロジェクト一覧に変える予定 -->
     <form class="todo__button">
       <button class="todo__button-submit" type="submit">勤務開始</button>
     </form>
