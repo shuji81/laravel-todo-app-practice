@@ -20,7 +20,7 @@ erDiagram
     }
     
     project_user {
-        BIGINT id
+        BIGINT id PK
         BIGINT project_id FK
         BIGINT user_id FK
         BOOLEAN is_admin
@@ -29,7 +29,7 @@ erDiagram
     }
     
     todos {
-        BIGINT id
+        BIGINT id PK
         BIGINT project_id FK
         VARCHAR title
         TEXT description
