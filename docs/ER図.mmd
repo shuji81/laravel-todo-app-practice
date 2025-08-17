@@ -1,0 +1,45 @@
+erDiagram
+    users {
+        BIGINT id PK
+        VARCHAR name
+        VARCHAR email
+        TIMESTAMP email_verified_at
+        VARCHAR password
+        VARCHAR remember_token
+        ENUM role
+        TIMESTAMP created_at
+        TIMESTAMP updated_at
+    }
+    
+    projects {
+        BIGINT id PK
+        VARCHAR name
+        TEXT description
+        TIMESTAMP created_at
+        TIMESTAMP updated_at
+    }
+    
+    project_user {
+        BIGINT id
+        BIGINT project_id FK
+        BIGINT user_id FK
+        BOOLEAN is_admin
+        TIMESTAMP created_at
+        TIMESTAMP updated_at
+    }
+    
+    todos {
+        BIGINT id
+        BIGINT project_id FK
+        VARCHAR title
+        TEXT description
+        ENUM status
+        BIGINT created_by FK
+        TIMESTAMP created_at
+        TIMESTAMP updated_at
+    }
+
+    users ||--o{ project_user: "has"
+    projects ||--o{ project_user: "has"
+    projects ||--o{ todos: "has"
+    users ||--o{ todos: "owns"
