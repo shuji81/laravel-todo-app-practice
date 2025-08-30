@@ -14,7 +14,9 @@
 | remember_token   | VARCHAR(100) | ログイン保持トークン                        |
 | created_at       | TIMESTAMP    | 作成日時                                   |
 | updated_at       | TIMESTAMP    | 更新日時                                   |
-| role             | ENUM         | 'user', 'admin'（追加）, DEFAULT 'user'    |
+
+**備考:**  
+- `role`カラムは将来的にユーザー毎に権限を持たせたいため追加したが、現状不要のため削除
 
 ### 1-2. projects テーブル
 
